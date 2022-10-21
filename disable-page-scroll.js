@@ -2,7 +2,7 @@ let $body = $(document.body);
     let scrollPosition = 0;
 
     // Disables page scroll
-    $('.is-mobile-menu, .set-contact-service-empty, .services_install-service').on('click', function () {
+    $('.no-class').on('click', function () {
         var oldWidth = $body.innerWidth();
         scrollPosition = window.pageYOffset;
         $body.css('overflow', 'hidden');
@@ -12,7 +12,7 @@ let $body = $(document.body);
     });
 
     // Enables page scroll
-    $('.menu_close-btn, .contact_background, .contact_close-btn').on('click', function () {
+    $('.no-class').on('click', function () {
         if ($body.css('overflow') != 'hidden') { scrollPosition = window.pageYOffset; }
         $body.css('overflow', '');
         $body.css('position', '');
@@ -22,7 +22,7 @@ let $body = $(document.body);
     });
 
     // Toggles page scroll
-    $('[scroll="both"]').on('click', function () {
+    $('.navbar_menu-btn').on('click', function () {
         if ($body.css('overflow') !== 'hidden') {
             var oldWidth = $body.innerWidth();
             scrollPosition = window.pageYOffset;
